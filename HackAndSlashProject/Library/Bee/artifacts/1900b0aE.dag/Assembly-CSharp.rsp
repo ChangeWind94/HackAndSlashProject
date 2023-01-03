@@ -352,6 +352,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/Data/DataCharacter.cs"
+"Assets/Scripts/Data/JSONData.cs"
 "Assets/Scripts/Manager/JSONManager.cs"
 "Assets/Scripts/Manager/SystemManager.cs"
 "Assets/Scripts/Manager/UIManager.cs"

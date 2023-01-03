@@ -57,11 +57,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Manager\UIManager.cs" />
+    <Compile Include="Assets\Scripts\Manager\JSONManager.cs" />
     <Compile Include="Assets\Scripts\Manager\SystemManager.cs" />
     <Compile Include="Assets\Scripts\System\UI\StartScene\UIGameStart.cs" />
     <Compile Include="Assets\Scripts\System\UI\StartScene\UICreateCharacter.cs" />
     <Compile Include="Assets\Scripts\Data\DataCharacter.cs" />
-    <Compile Include="Assets\Scripts\Manager\JSONManager.cs" />
+    <Compile Include="Assets\Scripts\Data\JSONData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

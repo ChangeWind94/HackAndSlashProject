@@ -23,51 +23,22 @@ public class JSONManager : MonoBehaviour
 
     public void JsonLoad()
     {
-        SaveData saveData = new SaveData();
+        JSONData saveData = new JSONData();
 
         if (!File.Exists(path))
         {
-            GameManager.instance.playerGold = 100;
-            GameManager.instance.playerPower = 4;
-            SaveData();
+            
         }
         else
         {
             string loadJson = File.ReadAllText(path);
-            saveData = JsonUtility.FromJson<SaveData>(loadJson);
-
-            if (saveData != null)
-            {
-                for (int i = 0; i < saveData.testDataA.Count; i++)
-                {
-                    GameManager.instance.testDataA.Add(saveData.testDataA[i]);
-                }
-                for (int i = 0; i < saveData.testDataB.Count; i++)
-                {
-                    GameManager.instance.testDataB.Add(saveData.testDataB[i]);
-                }
-                GameManager.instance.playerGold = saveData.gold;
-                GameManager.instance.playerPower = saveData.power;
-            }
+            saveData = JsonUtility.FromJson<JSONData>(loadJson);
         }
     }
 
-    public void JsonSave()
+    public void saveJson()
     {
-        SaveData saveData = new SaveData();
-
-        for (int i = 0; i < 10; i++)
-        {
-            saveData.testDataA.Add("테스트 데이터 no " + i);
-        }
-
-        for (int i = 0; i < 10; i++)
-        {
-            saveData.testDataB.Add(i);
-        }
-
-        saveData.gold = GameManager.instance.playerGold;
-        saveData.power = GameManager.instance.playerPower;
+        JSONData saveData = new JSONData();
 
         string json = JsonUtility.ToJson(saveData, true);
 
